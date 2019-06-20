@@ -8,7 +8,7 @@
 ```
 2. Create the sample project
 ```
-    serverless create -u https://github.com/shubhamsc/taiko-serverless-chrome.git
+    serverless create -u https://github.com/shubhamsc/taiko-serverless-chrome
 ```
 3. Install the dependencies
 ```
