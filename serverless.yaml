@@ -1,0 +1,23 @@
+
+service: taiko-serverless-chrome
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-west-2
+
+plugins:
+  - serverless-plugin-chrome
+
+
+package:
+  exclude:
+    - node_modules/taiko/.local-chromium/**
+
+
+functions:
+  taiko-test:
+    memorySize: 1024
+    timeout: 60
+    handler: taiko-test.handler
