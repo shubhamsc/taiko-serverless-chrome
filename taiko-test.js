@@ -1,4 +1,4 @@
-const {openBrowser, goto, closeBrowser} = require('taiko');
+const {openBrowser, goto, click, text, closeBrowser} = require('taiko');
 const launchChrome = require('@serverless-chrome/lambda');
 let chrome;
 
@@ -10,6 +10,8 @@ module.exports.handler = async function () {
         await console.log(chrome);
         await openBrowser({host:'127.0.0.1', port: 9222});
         await goto('gauge.org');
+        await click('Documentation');
+        await text('Gauge Documentation').exists();
     } catch (error) {
         console.error(error);
     } finally {
