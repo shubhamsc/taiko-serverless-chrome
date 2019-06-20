@@ -5,7 +5,7 @@ let chrome;
 module.exports.handler = async function () {
     try {
         chrome = await launchChrome({
-            flags: ['--window-size=1280,1696', '--hide-scrollbars']
+            flags: ['--window-size=1440,900', '--hide-scrollbars']
         })
         await console.log(chrome);
         await openBrowser({host:'127.0.0.1', port: 9222});
